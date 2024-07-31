@@ -1,0 +1,186 @@
+/* Importar a fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Container principal do header */
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  background-color: #fff8e6; /* Cor de fundo clara */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+  position: fixed; /* Fixa o header no topo da página */
+  top: 0;
+  left: 0;
+  z-index: 2000; /* Garantir que o header esteja sobre outros elementos */
+}
+
+/* Conteúdo do header */
+.header-content {
+  width: 80%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container da logo */
+.header-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo da imagem do logo */
+.header-logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* Container dos botões de navegação */
+.header-center {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Container dos botões à direita (login e carrinho) */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo padrão dos botões do header */
+.header-button {
+  background: none;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #1e1c3b; /* Cor do texto */
+  transition: color 0.1s; /* Transição suave para hover */
+}
+
+.header-button:hover {
+  color: #4c489c; /* Cor ao passar o mouse */
+}
+
+.header-button:focus {
+  outline: none; /* Remove a borda de foco padrão */
+}
+
+/* Estilo específico do botão de login */
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff8e6; /* Cor de fundo */
+  color: #1e1c3b; /* Cor do texto e ícone */
+  border: 2px solid #1e1c3b; /* Borda da mesma cor do fundo */
+  border-radius: 20px; /* Borda arredondada */
+  padding: 5px 15px; /* Espaçamento interno */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave para hover */
+}
+
+.login-button .icon {
+  margin-right: 5px; /* Espaçamento à direita do ícone */
+}
+
+.login-button:hover {
+  background-color: #4c489c; /* Cor de fundo ao passar o mouse */
+  color: white; /* Cor do texto e ícone ao passar o mouse */
+  border: 2px solid #ffffff;
+}
+
+/* Estilo do botão de carrinho */
+.cart-button {
+  margin-left: 20px; /* Espaçamento à esquerda do botão */
+}
+
+/* Estilo do menu hambúrguer (visível apenas em dispositivos móveis) */
+.menu-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.menu-hamburger div {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+}
+
+/* Menu dropdown que aparece ao clicar no menu hambúrguer */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 2000;
+}
+
+/* Mostrar o menu dropdown quando o estado menuOpen for verdadeiro */
+.menu-dropdown.show {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo dos botões dentro do menu dropdown */
+.menu-dropdown .header-button {
+  color: black;
+  padding: 10px 20px;
+}
+
+.menu-dropdown .header-button:hover {
+  color: #4c489c; /* Cor ao passar o mouse */
+}
+
+/* Estilo do botão de login para mobile */
+.login-mobile {
+  display: none;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.login-mobile .login-button {
+  background-color: #49489c; /* Cor de fundo */
+  color: white; /* Cor do texto e ícone */
+  padding: 10px 20px;
+  border: 2px solid #49489c;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login-mobile .login-button:hover {
+  background-color: #4c489c; /* Cor ao passar o mouse */
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+  .header-center,
+  .header-right {
+    display: none; /* Ocultar navegação e botões à direita no mobile */
+  }
+
+  .header-content {
+    flex-direction: row; /* Alinha os itens em uma linha */
+    justify-content: space-between; /* Espaço entre os itens */
+    width: 100%; /* Garantir que a largura seja 100% */
+  }
+
+  .menu-hamburger {
+    display: flex;
+    order: 2; /* Coloca o hambúrguer no final */
+  }
+  
+
+}

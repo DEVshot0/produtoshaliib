@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.carousel-container {
+  background-color: #ba6ff2; /* Fundo do contêiner do carrossel */
+  padding: 20px;
+}
+
+.custom-dot-list-style {
+  text-align: center;
+  padding: 10px;
+}
+
+.custom-dot-list-style li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.custom-dot-list-style li button {
+  background-color: #d1d1d1; /* Cor dos pontos */
+  border: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.custom-dot-list-style li.slick-active button {
+  background-color: #4c489c; /* Cor dos pontos ativos */
+}
+
+.carousel-item-padding-40-px {
+  padding: 20px;
+}
+
+.carousel-item {
+  background-color: #ffffff; /* Cor de fundo dos itens do carrossel */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  transition: transform 300ms ease-in-out; /* Suavizando a transição */
+  -webkit-font-smoothing: antialiased; /* Melhora a renderização do texto em Webkit */
+  font-size: 1rem; /* Ajuste de fonte para tamanhos menores */
+}
+
+.carousel-item h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.5rem; /* Ajuste de fonte para tamanhos menores */
+  color: #333;
+}
+
+.carousel-item p {
+  margin: 5px 0;
+  font-size: 1rem; /* Ajuste de fonte para tamanhos menores */
+  color: #555;
+}
+
+.carousel-item img.carousel-item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  image-rendering: -webkit-optimize-contrast; /* Melhorando a renderização da imagem */
+}
+
+.buy-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem; /* Ajuste de fonte para tamanhos menores */
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4c489c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-font-smoothing: antialiased; /* Melhora a renderização do texto em Webkit */
+}
+
+.buy-button:hover {
+  background-color: #3b377a;
+}
+
+/* Media query para mobile */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 10px; /* Ajustando o padding para mobile */
+  }
+
+  .carousel-item {
+    padding: 10px; /* Ajustando o padding dos itens para mobile */
+  }
+
+  .carousel-item h3 {
+    font-size: 1.2rem; /* Ajuste de fonte para tamanhos menores */
+  }
+
+  .carousel-item p {
+    font-size: 0.9rem; /* Ajuste de fonte para tamanhos menores */
+  }
+
+  .buy-button {
+    padding: 8px 16px; /* Ajustando o tamanho do botão para mobile */
+    font-size: 0.9rem; /* Ajuste de fonte para tamanhos menores */
+  }
+}
